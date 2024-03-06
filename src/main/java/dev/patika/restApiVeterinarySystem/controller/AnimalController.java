@@ -27,6 +27,7 @@ public class AnimalController {
         return animalService.getById(id);
     }
 
+    // create
 
     @PostMapping()
     @ResponseStatus(HttpStatus.CREATED)
@@ -46,6 +47,7 @@ public class AnimalController {
         animalService.deleteById(id);
     }
 
+    // update
 
     @GetMapping("/byName")
     @ResponseStatus(HttpStatus.OK)
@@ -53,7 +55,7 @@ public class AnimalController {
         return animalService.findByName(name);
     }
 
-
+    // get by name
     @GetMapping("/byCustomerName")
     @ResponseStatus(HttpStatus.OK)
     public List<AnimalResponse> findByCustomerName(@RequestParam String customerName) {
